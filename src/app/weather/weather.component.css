@@ -1,0 +1,16 @@
+.sun{
+    height: 3vh;
+    width: 3vw;
+    border-radius: 50%;
+    margin: 30px;
+    background-color: yellow;
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}

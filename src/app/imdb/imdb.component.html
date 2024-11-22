@@ -1,0 +1,40 @@
+<p>imdb works!</p>
+<div class="maincontainer">
+<div *ngFor="let movie of movies" class="sub">
+    <h1>{{movie.movie}}</h1>
+    <span>Rating: {{movie.rating}}</span>
+    <span *ngFor="let item of [].constructor(getRating(movie.rating)); let i = index">
+        <img
+          src="https://img.freepik.com/free-vector/basic-star-flat-vector_78370-1483.jpg?t=st=1731987078~exp=1731990678~hmac=00eea7759f74d860c95f71b18a680f5de0693bd0b18476ebdeb1cf0ccc1ea2a1&w=740"
+          width="30px"
+        />
+      </span>
+
+    <img src="{{movie.image}}" alt="" height="300px">
+    <!-- <butto (click)="view()">View on IMDB</button> -->
+        <br><br>
+        <a class="btn btn-primary" href="{{movie.imdb_url}}">View on IMDB</a>
+
+        <!-- <h1 class="title">Angular 12 , Basic Angular Template</h1>
+
+               star ratings 4 star
+        <span *ngFor="let item of [].constructor(4); let i = index">
+          <img
+            src="https://img.freepik.com/free-vector/basic-star-flat-vector_78370-1483.jpg?t=st=1731987078~exp=1731990678~hmac=00eea7759f74d860c95f71b18a680f5de0693bd0b18476ebdeb1cf0ccc1ea2a1&w=740"
+            width="30px"
+          />
+        </span>
+        <br /><br />
+        
+         5 star
+        <span *ngFor="let item of [].constructor(5); let i = index">
+          <img
+            src="https://img.freepik.com/free-vector/basic-star-flat-vector_78370-1483.jpg?t=st=1731987078~exp=1731990678~hmac=00eea7759f74d860c95f71b18a680f5de0693bd0b18476ebdeb1cf0ccc1ea2a1&w=740"
+            width="30px"
+          />
+        </span>
+        <br /><br /> -->
+        
+    </div>
+        
+    </div>

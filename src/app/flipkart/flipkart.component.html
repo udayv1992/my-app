@@ -1,0 +1,14 @@
+<p>flipkart works!</p>
+<div class="main" >
+<div class="sub" *ngFor="let product of products">
+<img src="{{product.image}}" alt="" width="150px" height="100px"> 
+<h5 class="five" style="background-color: black; width: 30px;">{{product.rating.rate}}</h5>
+
+<div class="details"> 
+<h1 class="two">{{product.category}}</h1>
+<h6 class="six">{{product.title}}</h6>
+<h5 class="five" >{{product.price}}</h5>
+<h5 class="five">{{product.rating.count}}</h5>
+</div> 
+</div>
+</div>

@@ -1,0 +1,14 @@
+    <div class="rec">
+        <h1>Rectangle:</h1>
+        <label for="">Length:</label>
+        <input type="number" id="num1" [(ngModel)]="num1">
+        <br><br>
+        <label for="">Breadth:</label>
+        <input type="number" id="num2" [(ngModel)]="num2">
+        <br><br>
+        <button (click)="area()" [disabled]="!num1 || !num2" class="rect">area</button>
+        <button (click)="perimeter()" class="rect">perimeter</button>
+        <br><br>
+        
+        <label id="result">{{result}}</label>
+    </div>

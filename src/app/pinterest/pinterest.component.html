@@ -1,0 +1,9 @@
+<p>pinterest works!</p>
+<div>
+    <div *ngFor="let photo of photos">
+        <img src="{{photo.download_url}}" alt="" width="100%" height="100%">
+        <h4 class="title">{{photo.author}}</h4>
+        <a class="btn btn-primary button" href="photo.download_url">Download</a>
+       
+    </div>
+</div>

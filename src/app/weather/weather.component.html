@@ -1,0 +1,17 @@
+<p>weather works!</p>
+<div class="main-container m-5">
+    <div class="containr" *ngFor="let weather of weathers">
+        <h1>Weather in Hyderabad</h1>
+        <div class="sun" [ngClass]="{'blue':weather.current_weather.temperature<0, 
+                                    'yellow':(weather.current_weather.temperature>0 && weather.current_weather.temperature<=30),
+                                    'red':(weather.current_weather.temperature>30 && weather.current_weather.temperature<=35) }">
+
+        </div>
+        <h6>Temp: {{weather.current_weather.temperature}}{{weather.current_weather_units.temperature}}</h6>
+        <h6>Speed: {{weather.current_weather.windspeed}}{{weather.current_weather_units.windspeed}}</h6>
+        <p>{{weather.current_weather.time | date:"dd/MM/yyyy"}}</p>
+        <h6>{{weather.current_weather.interval}}{{weather.current_weather_units.interval}}</h6>
+        
+
+    </div>
+</div>

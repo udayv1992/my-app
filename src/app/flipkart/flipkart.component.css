@@ -1,0 +1,31 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+
+}
+.sub{
+    
+    padding: 5px;
+   border: 3px solid blue;
+   background-color: azure;
+   
+}
+.two{
+    width: 30px;
+    color: red;
+    width: 130px;
+   font-size: 30px;
+   width: 160px;
+}
+.six{
+    width: 160px;
+    color: aqua;
+}
+.five{
+    color: orange;
+}
+.details{
+    width: 150px;
+   
+}

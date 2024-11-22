@@ -1,0 +1,11 @@
+.cir{
+    background-color: bisque;
+    border: 3px solid yellow;
+    text-align: center;
+    width: 250px;
+    height: 200px;
+}
+.circ{
+    margin: 3px;
+    background-color: pink;
+}

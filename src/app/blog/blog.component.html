@@ -1,0 +1,8 @@
+<p>blog works!</p>
+<div class="blogcont">
+<div *ngFor="let blog of blogs" class="sub">
+    <h1>{{blog.title}}</h1>
+    <h5>{{blog.author}} | {{blog.date_published}}</h5>
+    <p>{{blog.content}}</p>
+</div>
+</div>
