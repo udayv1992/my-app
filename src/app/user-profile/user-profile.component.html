@@ -1,0 +1,21 @@
+<h1 class="main-heading">Social Profiles</h1>
+<div *ngIf="profiles && profiles.length > 0" class="container">
+  <div class="main" *ngFor="let profile of profiles">
+   
+      <img src="{{profile.coverPhoto}}" alt="Profile Picture" width="60%" class="image">
+    
+    <h1 *ngIf="profile.privacySettings.showEmail">{{profile.email}}</h1>
+    <h1 *ngIf="profile.privacySettings.showBirthDate">{{profile.birthDate}}</h1>
+    <h1 class="one">{{profile.fullName}}</h1>
+    <h3 class="two">@{{profile.username}}</h3>
+    <h3 class="three">{{profile.bio}}</h3>
+    <h2 class="four">Work:{{profile.work}}</h2>
+    <h2 class="five">Hobbies:{{profile.hobbies}}</h2>
+    <h2 class="six">Interests:{{profile.interests}}</h2>
+    <a *ngIf="profile.homepage" [href]="profile.homepage" class="link">Visit Homepage</a>
+    <h2 class="seven">Followers:{{profile.followersCount}}</h2>
+    <h2 class="eight">Following:{{profile.followingCount}}</h2>
+    <h2 class="nine">Posts:{{profile.postsCount}}</h2>
+  </div>
+</div>
+<div *ngIf="profiles.length === 0">No profiles found</div>
