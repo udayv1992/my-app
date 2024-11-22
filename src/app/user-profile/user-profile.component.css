@@ -1,0 +1,27 @@
+.main-heading{
+height: 5%;
+background-color: greenyellow;
+color: azure;
+text-align: center;
+}
+.main{
+    width: 45%;
+
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid rgb(221, 101, 101);
+    border-radius: 10px;
+    
+}
+.image{
+   
+    margin-left: 5%;
+  
+    border-radius: 50%;    
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}

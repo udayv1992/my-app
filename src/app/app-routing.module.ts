@@ -28,6 +28,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
 import { StudentidComponent } from './studentid/studentid.component';
 import { CreateStudentidComponent } from './create-studentid/create-studentid.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -56,8 +57,10 @@ const routes: Routes = [
   {path:"createvehicle", component:CreateVehicleComponent},
   {path:"createaccounts", component:CreateAccountsComponent},
   {path:"studentid", component:StudentidComponent},
-  {path:"createstudentid", component:CreateStudentidComponent}
+  {path:"createstudentid", component:CreateStudentidComponent},
+  {path:"userprofile", component:UserProfileComponent},
 ]},
+  
   {path:'',component:LoginComponent},
   {path:'**', component:PageNotFoundComponent},
   
