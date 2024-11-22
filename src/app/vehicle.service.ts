@@ -20,7 +20,7 @@ getSortedVehicles(column:string, order:string):Observable<any>{
 }
 
 deleteVehicle(id:string):Observable<any>{
-  return this._httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
+  return this._httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+name);
 }
 
 getPagedVehicles(limit:number, page:number):Observable<any>{
