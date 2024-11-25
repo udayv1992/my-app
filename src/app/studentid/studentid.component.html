@@ -1,11 +1,41 @@
-<div class="container">
-<div class="main" *ngFor="let student of students">
+<input type="text" placeholder="search" [(ngModel)]="term" (keyup)="filter()">
+
+<select [(ngModel)]="column">
+    <option>name</option>
+    <option>city</option>
+    <option>email</option>
+
+</select>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>dsc</option>
+    <!-- <option value="asc">Ascending</option>
+    <option value="desc">Descending</option> -->
+</select>
+<button (click)="sort()">sort</button>
+<!-- pagination -->
+ <select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>50</option>
+
+ </select>
+ <select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+
+ </select>
+ <button (click)="pagination()">pagination</button>
+ <div class="container">
+     
+     <div class="main" *ngFor="let student of students">
     
-    <div class="head">
+     <div class="head">
         <img src="{{student.school_logo}}" alt="" width="50px">
         <h2>{{student.school_name}}</h2>
-    </div>
-    <div class="middle">
+     </div>
+     <div class="middle">
         <div class="sub">
         <h3>NAME:  {{student.name}}</h3>
         <h3>PHONE: {{student.phone}}</h3>
@@ -16,14 +46,14 @@
         <div>
         <img src="{{student.profile_picture}}" alt="" width="250px" height="300px">
         </div>
-    </div>
+     </div>
     
     <div class="footer">
         <label>School city: {{student.school_city}}</label>
         <label>School pin: {{student.school_pin}}</label>
         <button class="btn btn-primary">View</button>
         <button class="btn btn-secondary">Edit</button>
-        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-danger" (click)="delete(student.name)">Delete</button>
     </div>
 </div>
 </div>
