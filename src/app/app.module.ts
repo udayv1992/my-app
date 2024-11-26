@@ -34,6 +34,21 @@ import { CreateAccountsComponent } from './create-accounts/create-accounts.compo
 import { StudentidComponent } from './studentid/studentid.component';
 import { CreateStudentidComponent } from './create-studentid/create-studentid.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { DummyDisplayComponent } from './dummy-display/dummy-display.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatCommonModule} from '@angular/material/core';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DummyDialogDisplayComponent } from './dummy-dialog-display/dummy-dialog-display.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +81,10 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     CreateAccountsComponent,
     StudentidComponent,
     CreateStudentidComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    DummyDisplayComponent,
+    DummyDialogDisplayComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
@@ -74,6 +92,18 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatCommonModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
