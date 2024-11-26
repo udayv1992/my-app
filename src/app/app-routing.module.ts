@@ -29,6 +29,7 @@ import { CreateAccountsComponent } from './create-accounts/create-accounts.compo
 import { StudentidComponent } from './studentid/studentid.component';
 import { CreateStudentidComponent } from './create-studentid/create-studentid.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -59,6 +60,7 @@ const routes: Routes = [
   {path:"studentid", component:StudentidComponent},
   {path:"createstudentid", component:CreateStudentidComponent},
   {path:"userprofile", component:UserProfileComponent},
+  {path:"createuser", component:CreateUserComponent}
 ]},
   
   {path:'',component:LoginComponent},
