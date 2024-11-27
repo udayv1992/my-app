@@ -49,6 +49,7 @@ import { DummyDialogDisplayComponent } from './dummy-dialog-display/dummy-dialog
 import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentFormComponent } from './student-form/student-form.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
     UserProfileComponent,
     DummyDisplayComponent,
     DummyDialogDisplayComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    StudentFormComponent
   ],
   imports: [
     BrowserModule,
