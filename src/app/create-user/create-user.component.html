@@ -20,17 +20,31 @@
 <br>
 <label for="">Email:</label>
 <input type="text" formControlName="email">
+<div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+    <p class="error" *ngIf="userForm.get('email')?.errors?.['required']">email is required</p>
+    <p class="error" *ngIf="userForm.get('email')?.errors?.['email']">Invalid email format</p>
+
+</div>
 <br>
 <label for="">Phone:</label>
-<input type="text" formControlName="phone">
+<input type="number" formControlName="phone">
 <br>
+<div *ngIf="userForm.get('phone')?.touched && userForm.get('phone')?.invalid">
+    <p class="error" *ngIf="userForm.get('phone')?.errors?.['required']">phone is required</p>
+    <p class="error" *ngIf="userForm.get('phone')?.errors?.['min']">Minimum 10 digits</p>
+    <p class="error" *ngIf="userForm.get('phone')?.errors?.['max']">Max 10 digits</p>
+
+</div>
 <div formGroupName="address">
     <label for="">City:</label>
     <input type="text" formControlName="city">
+    <div *ngIf="userForm.get('address')?.get('city')?.touched && userForm.get('address')?.get('city')?.invalid">
+        <p class="error" *ngIf="userForm.get('address')?.get('city')?.errors?.['required']">city is required</p>
     <br>
     <label for="">Pin:</label>
     <input type="text" formControlName="pin">
 <br>
+</div>
 </div>
 <label for="">Type:</label>
 <input type="radio" name="type" formControlName="type" value="dayScholar">
@@ -59,6 +73,10 @@
             <h2>Card {{i+1}}</h2>
             <label for="">Number:</label>
             <input type="number" formControlName="number">
+            <div *ngIf="cardsFormArray.controls[i]?.get('number')?.touched && cardsFormArray.controls[i]?.get('number')?.invalid">
+                <p class="error" *ngIf="cardsFormArray.controls[i]?.get('number')?.errors?.['required']">Number is required</p>
+
+            </div>
             <br>
             <label for="">Expiry:</label>
             <input type="month" formControlName="expiry">
