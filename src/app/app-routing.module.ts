@@ -31,11 +31,12 @@ import { CreateStudentidComponent } from './create-studentid/create-studentid.co
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentFormComponent } from './student-form/student-form.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
     {path:'home', component:HomeComponent},
-  {path:'dashboard', component:DashboardComponent,children:[
+  {path:'dashboard', canActivate:[AuthenticationGuard], component:DashboardComponent,children:[
     {path:'welcome', component:WelcomeComponent},
     {path:'calculator', component:CalculatorComponent},
     {path:'rectangle', component:RectangleComponent},

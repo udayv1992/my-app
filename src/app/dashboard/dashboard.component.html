@@ -31,7 +31,8 @@
         <h3 routerLink="createuser">Create-user</h3>
         <h3 routerLink="studentform">Student-form</h3>
 
-        <button routerLink="/login">logout</button>
+        <!-- <button routerLink="/login">logout</button> -->
+        <button (click)="logout()">logout</button>
     </div>
     <div class="right">
         <router-outlet></router-outlet>
