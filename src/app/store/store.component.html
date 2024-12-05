@@ -55,7 +55,14 @@
         <td>{{i+1}}</td>
         <td>{{product.name}}</td>
         <td>{{product.price}}</td>
-        <td>{{product.rating}}</td>
+        <td>
+          <app-rating [rating]="product.rating"></app-rating>
+          <!-- <img src="/assets/5star.jpg" *ngIf="rating<=5 && rating >4" alt="" width="80px" height="40px" >
+          <img src="/assets/4star.jpg" *ngIf="rating<=4 && rating >3" alt="" width="80px" height="40px" >
+          <img src="/assets/3star.jpg" *ngIf="rating<=3 && rating >2" alt="" width="80px" height="40px" >
+          <img src="/assets/2star.jpg" *ngIf="rating<=2 && rating >1" alt="" width="80px" height="40px" >
+          <img src="/assets/1star.jpg" *ngIf="rating<=1 && rating >0" alt="" width="80px" height="40px" > -->
+        </td>
         <td>{{product.delivery}}</td>
         <td><button class="btn btn-primary" (click)="delete(i)">Delete</button></td>
        </tr>

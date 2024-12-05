@@ -13,7 +13,7 @@
         <h3 routerLink="eventregistration">Event Registration</h3>
         <h3 routerLink="registration">Registration</h3>
         <h3 routerLink="employee">Employee</h3>
-        <h3 routerLink="store">Store</h3>
+        <h3 routerLink="store">store</h3>
         <h3 routerLink="bankaccount">bankaccount</h3>
         <h3 routerLink="vehicle">Vehicle</h3>
         <h3 routerLink="flipkart">Flipkart</h3>
@@ -30,8 +30,11 @@
         <h3 routerLink="userprofile">User-profile</h3>
         <h3 routerLink="createuser">Create-user</h3>
         <h3 routerLink="studentform">Student-form</h3>
+        <h3 routerLink="parent">parent</h3>
+        <h3 routerLink="sibling">sibling</h3>
 
-        <button routerLink="/login">logout</button>
+        <!-- <button routerLink="/login">logout</button> -->
+        <button (click)="logout()">logout</button>
     </div>
     <div class="right">
         <router-outlet></router-outlet>

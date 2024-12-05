@@ -50,6 +50,16 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentFormComponent } from './student-form/student-form.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { SiblingComponent } from './sibling/sibling.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { TextAreaComponent } from './text-area/text-area.component';
+import { PricePipe } from './price.pipe';
+import { CapitalDirective } from './capital.directive';
 
 @NgModule({
   declarations: [
@@ -86,7 +96,17 @@ import { StudentFormComponent } from './student-form/student-form.component';
     DummyDisplayComponent,
     DummyDialogDisplayComponent,
     CreateUserComponent,
-    StudentFormComponent
+    StudentFormComponent,
+    VehicleDetailsComponent,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    SiblingComponent,
+    Sibling1Component,
+    Sibling2Component,
+    TextAreaComponent,
+    PricePipe,
+    CapitalDirective
   ],
   imports: [
     BrowserModule,
