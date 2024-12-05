@@ -54,10 +54,15 @@
             <td>
                 <img src="{{vehicle.img}}" alt="" width="100px">
             </td>
-            <td>{{vehicle.id}}</td>
+            <td>
+                {{vehicle.id}}</td>
+                <td>
             
             <button (click)="delete(vehicle.id)" class="btn btn-danger">Delete</button>
-
+                    <button routerLink="/dashboard/vehicledetails/{{vehicle.id}}" class="btn btn-warning">view</button>
+                    <button routerLink="/dashboard/edit-vehicle/{{vehicle.id}}" class="btn btn-info">edit</button>
+                    
+                </td>
         </tr>
 
     </tbody>

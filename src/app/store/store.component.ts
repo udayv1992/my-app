@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-store',
@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./store.component.css']
 })
 export class StoreComponent {
+  @Input() rating:number=0;
   name:string = "";
   price:number= 0;
-  rating:number = 0;
+  // rating:number = 0;
   delivery:boolean = false;
   products:any = [
     {name:'pen', price:10, rating:3, delivery:true},

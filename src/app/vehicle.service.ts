@@ -6,11 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class VehicleService {
-
+  baseUrl:string = "https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction";
   constructor(private _httpClient:HttpClient) { }
   getVehicles():Observable<any>{
-return this._httpClient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction');
+return this._httpClient.get(this.baseUrl);
 }
+getVehicle(id:string):Observable<any>{
+  return this._httpClient.get(this.baseUrl+"/"+id);
+  }
 
 getfilteredVehicles(term:string):Observable<any>{
   return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term);
@@ -29,6 +32,8 @@ getPagedVehicles(limit:number, page:number):Observable<any>{
 createVehicle(data:any):Observable<any>{
   return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction",data);
 }
-
+updateVehicle(id:string, data:any):Observable<any>{
+  return this._httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id,data);
+}
 
 }
